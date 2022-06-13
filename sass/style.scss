@@ -6,6 +6,12 @@
   overflow-x: hidden;
   outline: none;
 }
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
 h2,h1,h4,h3{
     line-height: 1.6;
 }
@@ -23,128 +29,45 @@ p {
   opacity: 0.85;
   font-size: 18px;
 }
-.navigation-bar {
-  height: 15vh;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(255, 255, 255, 1);
-  border-bottom: .7px solid rgba(0, 0, 0, 0.2);
-  z-index: 99;
-  .menu-icon {
-    display: none;
-  }
-  .container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .logo {
-      height: 100%;
-      width: 150px;
-      overflow: hidden;
-      img {
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-    .navigation-bar-links ul {
-      li {
-        padding: 8px;
-        margin: 0 5px;
-        a {
-          text-decoration: none;
-          color: rgb(24, 26, 43);
-          text-transform: uppercase;
-          opacity: 0.9;
-          font-weight: normal;
-          position: relative;
-          font-size: 12px;
-          padding-bottom: 5px;
-          transition: all 0.3s ease-in-out;
-          &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
-            width: 70%;
-            height: 1px;
-            background: rgb(5, 12, 97);
-            transition: all 0.3s ease-in-out;
-          }
-          &:hover::after {
-            opacity: 1;
-          }
-        }
-        a.active{
-            opacity: 1;
-            font-weight: bold;
-        }
-        i {
-          font-size: 25px;
-          color: white;
-          background: green;
-          height: 40px;
-          width: 40px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50%;
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        }
-      }
-    }
-    @media (max-width: 991px) {
-      .menu-icon {
-        font-size: 22px;
-        cursor: pointer;
-        display: block;
-      }
-
-      ul {
-        position: fixed;
-        top: 15vh;
-        left: 0;
-        width: 100%;
-        background: rgb(242, 140, 140);
-        padding: 0;
-        flex: 0;
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-        justify-content: center;
-        align-items: center;
-        z-index: 99;
-        transition: all .3s ease-in-out;
-        height: 0;
-        li {
-          width: 100%;
-          text-align: center;
-          margin: 5px 0;
-          padding: 12px;
-          transition: all 0.3s ease-in-out;
-          a {
-              color:white;
-            }
-            &:hover {
-              background: #ef8535;
+.navbar{
+    .container{
+        .navbar-brand{
+            height: 80px;
+            width: 160px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
         }
-        li:last-child {
-          display: none;
+        ul li{
+            padding: 8px;
+            text-align: center;
+            a{
+                font-family: lato;
+                text-transform: uppercase;
+                font-size: 13px;
+                color: rgb(9, 84, 160);
+            }
+            a.active{
+                color: #0a0905;
+                font-weight: bold;
+            }
         }
-      }
-      ul.active{
-        height: auto;
-      }
+        @media (max-width:991px) {
+            ul{
+                padding: 0 20px;
+                li{
+                    margin-bottom: 8px;
+                    transition: all .3s ease-in-out;
+                    &:hover{
+                        background: rgba(0, 0, 0, 0.1);
+                    }
+                }
+            }
+            
+        }
     }
-  }
 }
 
 .home-section {
@@ -224,39 +147,68 @@ p {
 
 .portfolio-grid .container {
   .filter-btns {
+    flex-wrap: wrap;
     .filter-btn {
       border: 1px solid rgba(0, 0, 0, 0.4);
       padding: 12px 26px;
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       align-items: center;
       border-radius: 24px;
-      font-weight: bold;
       text-transform: uppercase;
       font-size: 14px;
+      letter-spacing: .5px;
       color: rgba(0, 0, 0, 0.6);
+      cursor: pointer;
       &.active {
         background: rgba(0, 0, 0, 0.6);
         color: white;
       }
+    }
+    @media (max-width:991px) {
+        .filter-btn{
+            padding: 8px 16px;
+        }
     }
   }
   .my-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    overflow: hidden;
     .card {
       border: 0;
       border-radius: 0;
       background: rgba(0, 0, 200, 0.03);
+      overflow: hidden;
+      height: 350px;
+      cursor: pointer;
+      img{
+        width: 100%;
+        height: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
       .image-name {
         font-family: "Ubuntu", sans-serif;
         font-weight: normal;
         color: rgba(0, 0, 0, 0.6);
         padding: 10px 0;
         text-align: center;
+        height: 50px;
+
       }
+    }
+    .card.hide{
+        display: none;
+    }
+    .card.show{
+        display: block;
+        animation: zoom .3s ease-in-out;
+    }
+    @keyframes zoom {
+        0%{ transform: scale(.7);}
+        100%{ transform:scale(1);}
     }
   }
 }
@@ -295,8 +247,7 @@ p {
     }
 }
 .about-me{
-    padding: 100px;
-    padding-top: 15vh;
+    padding:50px 0;
     .container{
         .div{
             img{
@@ -386,12 +337,15 @@ p {
 }
 
 .album-section{
-    padding-top: 15vh;
+    padding-top: 50px;
     .container{
         .row{
             display: grid;
             gap: 10px;
-            grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+            grid-template-columns: repeat(2,1fr);
+            @media (max-width:768px) {
+                grid-template-columns: 1fr;
+            }
         }
         .row .card{
             position: relative;
@@ -431,6 +385,107 @@ p {
             &:hover{
                 transform: scale(.98);
             }
+        }
+    }
+}
+
+.go-to-top{
+    height: 50px;
+    width: 35px;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    background: rgba(255, 255, 255, 0.615);
+    backdrop-filter: blur(5px);
+    border-radius: 4px;
+    box-shadow: 0 0 4px black;
+    cursor: pointer;
+    a{
+        height: 100%;
+        width: 100%;
+        transform: rotate(-90deg);
+    }
+}
+.preview-image{
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    .containers{
+        max-width: 600px;
+        max-height: 600px;
+        box-shadow: 0 0 10px white;
+        margin: 20px;
+        border-radius: 20px;
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        i{
+            position: absolute;
+            right: 10%;
+            top: 10%;
+            background: white;
+            height: 30px;
+            width: 30px;
+            cursor: pointer;
+            box-shadow:  0 0 4px rgb(24, 26, 43);
+        }
+    }
+}
+.preview-image.active{
+    display: flex;
+    animation: zzoom .1s ease-in-out;
+    @keyframes zzoom {
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+    }
+}
+
+.services{
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 30, 0.4), rgba(0, 0, 30, 0.4)),
+    url(https://media.istockphoto.com/photos/asian-senior-couple-enjoy-on-the-beach-picture-id1322107286?b=1&k=20&m=1322107286&s=170667a&w=0&h=rmJtZykmkWlv5mCL5KqYwQ6PXywUT1LmYhzoX_1d6S4=) no-repeat center center/cover;
+}
+.service-grid .container .row{
+    .card{
+        border: 0;
+        text-align: center;
+        height: 400px;
+        margin-bottom: 20px;
+        .card-body{
+            overflow: hidden;
+            height: 100px;
+        }
+        img{
+            height: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            width: 100%;
+        }
+        h4{
+            font-family: serif;
+            color: #0a0905;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+        p{
+            font-family: serif;
+            font-style: italic;
+            letter-spacing: .5px;
+            font-size: 16px;
+            font-weight: normal;
+            opacity: .8;
         }
     }
 }

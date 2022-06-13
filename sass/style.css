@@ -7,6 +7,14 @@
   outline: none;
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 h2, h1, h4, h3 {
   line-height: 1.6;
 }
@@ -29,163 +37,46 @@ p {
   font-size: 18px;
 }
 
-.navigation-bar {
-  height: 15vh;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: white;
-  border-bottom: 0.7px solid rgba(0, 0, 0, 0.2);
-  z-index: 99;
+.navbar .container .navbar-brand {
+  height: 80px;
+  width: 160px;
 }
 
-.navigation-bar .menu-icon {
-  display: none;
-}
-
-.navigation-bar .container {
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.navigation-bar .container .logo {
-  height: 100%;
-  width: 150px;
-  overflow: hidden;
-}
-
-.navigation-bar .container .logo img {
-  overflow: hidden;
+.navbar .container .navbar-brand img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.navigation-bar .container .navigation-bar-links ul li {
+.navbar .container ul li {
   padding: 8px;
-  margin: 0 5px;
+  text-align: center;
 }
 
-.navigation-bar .container .navigation-bar-links ul li a {
-  text-decoration: none;
-  color: #181a2b;
+.navbar .container ul li a {
+  font-family: lato;
   text-transform: uppercase;
-  opacity: 0.9;
-  font-weight: normal;
-  position: relative;
-  font-size: 12px;
-  padding-bottom: 5px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  font-size: 13px;
+  color: #0954a0;
 }
 
-.navigation-bar .container .navigation-bar-links ul li a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  opacity: 0;
-  width: 70%;
-  height: 1px;
-  background: #050c61;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.navigation-bar .container .navigation-bar-links ul li a:hover::after {
-  opacity: 1;
-}
-
-.navigation-bar .container .navigation-bar-links ul li a.active {
-  opacity: 1;
+.navbar .container ul li a.active {
+  color: #0a0905;
   font-weight: bold;
 }
 
-.navigation-bar .container .navigation-bar-links ul li i {
-  font-size: 25px;
-  color: white;
-  background: green;
-  height: 40px;
-  width: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 50%;
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
 @media (max-width: 991px) {
-  .navigation-bar .container .menu-icon {
-    font-size: 22px;
-    cursor: pointer;
-    display: block;
+  .navbar .container ul {
+    padding: 0 20px;
   }
-  .navigation-bar .container ul {
-    position: fixed;
-    top: 15vh;
-    left: 0;
-    width: 100%;
-    background: #f28c8c;
-    padding: 0;
-    -webkit-box-flex: 0;
-        -ms-flex: 0;
-            flex: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 100%;
-    padding: 0;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    z-index: 99;
+  .navbar .container ul li {
+    margin-bottom: 8px;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    height: 0;
   }
-  .navigation-bar .container ul li {
-    width: 100%;
-    text-align: center;
-    margin: 5px 0;
-    padding: 12px;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-  }
-  .navigation-bar .container ul li a {
-    color: white;
-  }
-  .navigation-bar .container ul li:hover {
-    background: #ef8535;
-  }
-  .navigation-bar .container ul li:last-child {
-    display: none;
-  }
-  .navigation-bar .container ul.active {
-    height: auto;
+  .navbar .container ul li:hover {
+    background: rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -288,6 +179,11 @@ p {
   }
 }
 
+.portfolio-grid .container .filter-btns {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .portfolio-grid .container .filter-btns .filter-btn {
   border: 1px solid rgba(0, 0, 0, 0.4);
   padding: 12px 26px;
@@ -297,21 +193,26 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   border-radius: 24px;
-  font-weight: bold;
   text-transform: uppercase;
   font-size: 14px;
+  letter-spacing: .5px;
   color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
 }
 
 .portfolio-grid .container .filter-btns .filter-btn.active {
   background: rgba(0, 0, 0, 0.6);
   color: white;
+}
+
+@media (max-width: 991px) {
+  .portfolio-grid .container .filter-btns .filter-btn {
+    padding: 8px 16px;
+  }
 }
 
 .portfolio-grid .container .my-grid {
@@ -320,12 +221,24 @@ p {
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+  overflow: hidden;
 }
 
 .portfolio-grid .container .my-grid .card {
   border: 0;
   border-radius: 0;
   background: rgba(0, 0, 200, 0.03);
+  overflow: hidden;
+  height: 350px;
+  cursor: pointer;
+}
+
+.portfolio-grid .container .my-grid .card img {
+  width: 100%;
+  height: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .portfolio-grid .container .my-grid .card .image-name {
@@ -334,6 +247,39 @@ p {
   color: rgba(0, 0, 0, 0.6);
   padding: 10px 0;
   text-align: center;
+  height: 50px;
+}
+
+.portfolio-grid .container .my-grid .card.hide {
+  display: none;
+}
+
+.portfolio-grid .container .my-grid .card.show {
+  display: block;
+  -webkit-animation: zoom .3s ease-in-out;
+          animation: zoom .3s ease-in-out;
+}
+
+@-webkit-keyframes zoom {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .my-title {
@@ -373,8 +319,7 @@ p {
 }
 
 .about-me {
-  padding: 100px;
-  padding-top: 15vh;
+  padding: 50px 0;
 }
 
 .about-me .container .div img {
@@ -498,15 +443,22 @@ p {
 }
 
 .album-section {
-  padding-top: 15vh;
+  padding-top: 50px;
 }
 
 .album-section .container .row {
   display: -ms-grid;
   display: grid;
   gap: 10px;
-  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 768px) {
+  .album-section .container .row {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 .album-section .container .row .card {
@@ -557,5 +509,146 @@ p {
 .album-section .container .row .card:hover {
   -webkit-transform: scale(0.98);
           transform: scale(0.98);
+}
+
+.go-to-top {
+  height: 50px;
+  width: 35px;
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+  background: rgba(255, 255, 255, 0.615);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 4px black;
+          box-shadow: 0 0 4px black;
+  cursor: pointer;
+}
+
+.go-to-top a {
+  height: 100%;
+  width: 100%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.preview-image {
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+.preview-image .containers {
+  max-width: 600px;
+  max-height: 600px;
+  -webkit-box-shadow: 0 0 10px white;
+          box-shadow: 0 0 10px white;
+  margin: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.preview-image .containers img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.preview-image .containers i {
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  background: white;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 4px #181a2b;
+          box-shadow: 0 0 4px #181a2b;
+}
+
+.preview-image.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: zzoom .1s ease-in-out;
+          animation: zzoom .1s ease-in-out;
+}
+
+@-webkit-keyframes zzoom {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zzoom {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.services {
+  height: 70vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 30, 0.4)), to(rgba(0, 0, 30, 0.4))), url(https://media.istockphoto.com/photos/asian-senior-couple-enjoy-on-the-beach-picture-id1322107286?b=1&k=20&m=1322107286&s=170667a&w=0&h=rmJtZykmkWlv5mCL5KqYwQ6PXywUT1LmYhzoX_1d6S4=) no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 30, 0.4), rgba(0, 0, 30, 0.4)), url(https://media.istockphoto.com/photos/asian-senior-couple-enjoy-on-the-beach-picture-id1322107286?b=1&k=20&m=1322107286&s=170667a&w=0&h=rmJtZykmkWlv5mCL5KqYwQ6PXywUT1LmYhzoX_1d6S4=) no-repeat center center/cover;
+}
+
+.service-grid .container .row .card {
+  border: 0;
+  text-align: center;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+.service-grid .container .row .card .card-body {
+  overflow: hidden;
+  height: 100px;
+}
+
+.service-grid .container .row .card img {
+  height: 100%;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.service-grid .container .row .card h4 {
+  font-family: serif;
+  color: #0a0905;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.service-grid .container .row .card p {
+  font-family: serif;
+  font-style: italic;
+  letter-spacing: .5px;
+  font-size: 16px;
+  font-weight: normal;
+  opacity: .8;
 }
 /*# sourceMappingURL=style.css.map */
