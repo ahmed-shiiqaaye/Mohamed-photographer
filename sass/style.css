@@ -37,6 +37,42 @@ p {
   font-size: 18px;
 }
 
+.my-title {
+  padding: 40px 0;
+  margin-bottom: 50px;
+  font-family: serif;
+}
+
+.my-title h2 {
+  line-height: 1.6;
+  font-weight: normal;
+  font-family: serif;
+  text-transform: capitalize;
+  padding: 20px 0;
+  font-style: italic;
+  color: #0a0905;
+  position: relative;
+  font-size: 35px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.my-title h2::before {
+  content: '';
+  height: 5px;
+  width: 80px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #0954a0;
+}
+
+.my-title p {
+  font-family: serif;
+  opacity: .8;
+  font-style: italic;
+}
+
 .navbar .container .navbar-brand {
   height: 80px;
   width: 160px;
@@ -262,6 +298,7 @@ p {
   padding: 10px 0;
   text-align: center;
   height: 50px;
+  text-transform: capitalize;
 }
 
 .portfolio-grid .container .my-grid .card.hide {
@@ -294,42 +331,6 @@ p {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-}
-
-.my-title {
-  padding: 40px 0;
-  margin-bottom: 50px;
-  font-family: serif;
-}
-
-.my-title h2 {
-  line-height: 1.6;
-  font-weight: normal;
-  font-family: serif;
-  text-transform: capitalize;
-  padding: 20px 0;
-  font-style: italic;
-  color: #0a0905;
-  position: relative;
-  font-size: 35px;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-.my-title h2::before {
-  content: '';
-  height: 5px;
-  width: 80px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background: #0954a0;
-}
-
-.my-title p {
-  font-family: serif;
-  opacity: .8;
-  font-style: italic;
 }
 
 .about-me {
@@ -469,6 +470,48 @@ p {
   background: #c4c3c3;
 }
 
+.services {
+  height: 70vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 30, 0.4)), to(rgba(0, 0, 30, 0.4))), url(https://media.istockphoto.com/photos/asian-senior-couple-enjoy-on-the-beach-picture-id1322107286?b=1&k=20&m=1322107286&s=170667a&w=0&h=rmJtZykmkWlv5mCL5KqYwQ6PXywUT1LmYhzoX_1d6S4=) no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 30, 0.4), rgba(0, 0, 30, 0.4)), url(https://media.istockphoto.com/photos/asian-senior-couple-enjoy-on-the-beach-picture-id1322107286?b=1&k=20&m=1322107286&s=170667a&w=0&h=rmJtZykmkWlv5mCL5KqYwQ6PXywUT1LmYhzoX_1d6S4=) no-repeat center center/cover;
+}
+
+.service-grid .container .row .card {
+  border: 0;
+  text-align: center;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+.service-grid .container .row .card .card-body {
+  overflow: hidden;
+  height: 100px;
+}
+
+.service-grid .container .row .card img {
+  height: 100%;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.service-grid .container .row .card h4 {
+  font-family: serif;
+  color: #0a0905;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.service-grid .container .row .card p {
+  font-family: serif;
+  font-style: italic;
+  letter-spacing: .5px;
+  font-size: 16px;
+  font-weight: normal;
+  opacity: .8;
+}
+
 .album-section {
   padding-top: 50px;
 }
@@ -537,6 +580,35 @@ p {
 .album-section .container .row .card:hover {
   -webkit-transform: scale(0.98);
           transform: scale(0.98);
+}
+
+footer {
+  background: rgba(127, 127, 244, 0.303);
+}
+
+footer .container .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  align-items: center;
+}
+
+footer .container .row p {
+  font-size: 15px;
+  font-family: serif;
+  margin: 0;
+}
+
+footer .container .row div {
+  font-family: pt sans;
+  font-size: 12pxx;
+  margin: 0;
+  color: #0969a0;
 }
 
 .go-to-top {
@@ -636,76 +708,5 @@ p {
   100% {
     opacity: 1;
   }
-}
-
-.services {
-  height: 70vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 30, 0.4)), to(rgba(0, 0, 30, 0.4))), url(https://media.istockphoto.com/photos/asian-senior-couple-enjoy-on-the-beach-picture-id1322107286?b=1&k=20&m=1322107286&s=170667a&w=0&h=rmJtZykmkWlv5mCL5KqYwQ6PXywUT1LmYhzoX_1d6S4=) no-repeat center center/cover;
-  background: linear-gradient(rgba(0, 0, 30, 0.4), rgba(0, 0, 30, 0.4)), url(https://media.istockphoto.com/photos/asian-senior-couple-enjoy-on-the-beach-picture-id1322107286?b=1&k=20&m=1322107286&s=170667a&w=0&h=rmJtZykmkWlv5mCL5KqYwQ6PXywUT1LmYhzoX_1d6S4=) no-repeat center center/cover;
-}
-
-.service-grid .container .row .card {
-  border: 0;
-  text-align: center;
-  height: 400px;
-  margin-bottom: 20px;
-}
-
-.service-grid .container .row .card .card-body {
-  overflow: hidden;
-  height: 100px;
-}
-
-.service-grid .container .row .card img {
-  height: 100%;
-  max-height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-}
-
-.service-grid .container .row .card h4 {
-  font-family: serif;
-  color: #0a0905;
-  font-size: 24px;
-  text-transform: uppercase;
-}
-
-.service-grid .container .row .card p {
-  font-family: serif;
-  font-style: italic;
-  letter-spacing: .5px;
-  font-size: 16px;
-  font-weight: normal;
-  opacity: .8;
-}
-
-footer {
-  background: #b0b0b0;
-}
-
-footer .container .row {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  align-items: center;
-}
-
-footer .container .row p {
-  font-size: 15px;
-  font-family: serif;
-  margin: 0;
-}
-
-footer .container .row div {
-  font-family: pt sans;
-  font-size: 12pxx;
-  margin: 0;
-  color: #0969a0;
 }
 /*# sourceMappingURL=style.css.map */

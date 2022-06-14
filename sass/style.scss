@@ -29,6 +29,41 @@ p {
   opacity: 0.85;
   font-size: 18px;
 }
+// Title common code
+.my-title{
+    padding: 40px 0;
+    margin-bottom: 50px;
+    font-family: serif;
+    h2{
+        line-height: 1.6;
+        font-weight: normal;
+        font-family: serif;
+        text-transform: capitalize;
+        padding: 20px 0;
+        font-style: italic;
+        color: #0a0905;
+        position: relative;
+        font-size: 35px;
+        line-height: 1;
+        text-transform: uppercase;
+        &::before{
+            content: '';
+            height: 5px;
+            width: 80px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: rgb(9, 84, 160);
+        }
+    }
+    p{
+        font-family: serif;
+        opacity: .8;
+        font-style: italic;
+    }
+}
+
+// Nabar -----
 .navbar{
     .container{
         .navbar-brand{
@@ -70,6 +105,7 @@ p {
     }
 }
 
+// Home section 
 .home-section {
   position: relative;
   height: 90vh;
@@ -123,6 +159,8 @@ p {
     }
   }
 }
+
+// The grid section next to home page
 .headline {
   margin: 0;
   .container-fluid .row {
@@ -153,6 +191,7 @@ p {
   }
 }
 
+// Portfolio images / Gallery file
 .portfolio-grid .container {
   .filter-btns {
     flex-wrap: wrap;
@@ -204,6 +243,7 @@ p {
         padding: 10px 0;
         text-align: center;
         height: 50px;
+        text-transform: capitalize;
 
       }
     }
@@ -221,39 +261,7 @@ p {
   }
 }
 
-
-.my-title{
-    padding: 40px 0;
-    margin-bottom: 50px;
-    font-family: serif;
-    h2{
-        line-height: 1.6;
-        font-weight: normal;
-        font-family: serif;
-        text-transform: capitalize;
-        padding: 20px 0;
-        font-style: italic;
-        color: #0a0905;
-        position: relative;
-        font-size: 35px;
-        line-height: 1;
-        text-transform: uppercase;
-        &::before{
-            content: '';
-            height: 5px;
-            width: 80px;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            background: rgb(9, 84, 160);
-        }
-    }
-    p{
-        font-family: serif;
-        opacity: .8;
-        font-style: italic;
-    }
-}
+//About me / Bio & Contact file
 .about-me{
     padding:50px 0;
     .container{
@@ -355,6 +363,48 @@ p {
     }
 }
 
+// Services section
+.services{
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 30, 0.4), rgba(0, 0, 30, 0.4)),
+    url(https://media.istockphoto.com/photos/asian-senior-couple-enjoy-on-the-beach-picture-id1322107286?b=1&k=20&m=1322107286&s=170667a&w=0&h=rmJtZykmkWlv5mCL5KqYwQ6PXywUT1LmYhzoX_1d6S4=) no-repeat center center/cover;
+}
+
+// the grid section of the services
+.service-grid .container .row{
+    .card{
+        border: 0;
+        text-align: center;
+        height: 400px;
+        margin-bottom: 20px;
+        .card-body{
+            overflow: hidden;
+            height: 100px;
+        }
+        img{
+            height: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            width: 100%;
+        }
+        h4{
+            font-family: serif;
+            color: #0a0905;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+        p{
+            font-family: serif;
+            font-style: italic;
+            letter-spacing: .5px;
+            font-size: 16px;
+            font-weight: normal;
+            opacity: .8;
+        }
+    }
+}
+
+// Album & wedding couples
 .album-section{
     padding-top: 50px;
     .container{
@@ -409,6 +459,30 @@ p {
     }
 }
 
+
+// footer
+footer{
+    background:rgba(127, 127, 244, 0.303);
+    .container .row{
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        p{
+            font-size: 15px;    
+            font-family: serif;
+            margin: 0;
+        }
+        div{
+            font-family: pt sans;
+            font-size: 12pxx;
+            margin: 0;
+            color: rgb(9, 105, 160);
+        }
+    }
+} 
+
+// go to the top
 .go-to-top{
     height: 50px;
     width: 35px;
@@ -426,6 +500,7 @@ p {
         transform: rotate(-90deg);
     }
 }
+// preview image when the gallery image is clicked
 .preview-image{
     height: 100vh;
     width: 100%;
@@ -469,64 +544,5 @@ p {
     @keyframes zzoom {
         0%{opacity: 0;}
         100%{opacity: 1;}
-    }
-}
-
-.services{
-    height: 70vh;
-    background: linear-gradient(rgba(0, 0, 30, 0.4), rgba(0, 0, 30, 0.4)),
-    url(https://media.istockphoto.com/photos/asian-senior-couple-enjoy-on-the-beach-picture-id1322107286?b=1&k=20&m=1322107286&s=170667a&w=0&h=rmJtZykmkWlv5mCL5KqYwQ6PXywUT1LmYhzoX_1d6S4=) no-repeat center center/cover;
-}
-.service-grid .container .row{
-    .card{
-        border: 0;
-        text-align: center;
-        height: 400px;
-        margin-bottom: 20px;
-        .card-body{
-            overflow: hidden;
-            height: 100px;
-        }
-        img{
-            height: 100%;
-            max-height: 300px;
-            object-fit: cover;
-            width: 100%;
-        }
-        h4{
-            font-family: serif;
-            color: #0a0905;
-            font-size: 24px;
-            text-transform: uppercase;
-        }
-        p{
-            font-family: serif;
-            font-style: italic;
-            letter-spacing: .5px;
-            font-size: 16px;
-            font-weight: normal;
-            opacity: .8;
-        }
-    }
-}
-
-footer{
-    background: #b0b0b0;
-}
-footer .container .row{
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    p{
-        font-size: 15px;    
-        font-family: serif;
-        margin: 0;
-    }
-    div{
-        font-family: pt sans;
-        font-size: 12pxx;
-        margin: 0;
-        color: rgb(9, 105, 160);
     }
 }
