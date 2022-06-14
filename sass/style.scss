@@ -278,6 +278,15 @@ p {
                 font-family: serif;
                 font-style: italic;
             }
+            .row .inner ul{
+                list-style-type: circle;
+            }
+            .row .inner ul li{
+                font-family: serif;
+                font-style: italic;
+                opacity: .85;
+                list-style-type: circle;
+            }
             .row .forms{
                 .groups{
                     h3{
@@ -285,6 +294,7 @@ p {
                         font-weight: 500;
                         margin-bottom: 0;
                         font-style: italic;
+                        color: rgb(203, 177, 5);
                     }
                     p{
                         font-family: serif;
@@ -303,11 +313,12 @@ p {
                     i{
                         height: 40px;
                         width: 40px;
-                        background-color: #e5e5e5;
+                        background-color: rgba(203, 177, 5, 0.678);
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         border-radius: 50%;
+                        color: #0a0808;
                     }
                 }
                 .form-inputs{
@@ -379,6 +390,7 @@ p {
                     color: white;
                     font-style: italic;
                     margin-bottom: 0;
+                    text-transform: capitalize;
                 }
                 p{
                     font-style: italic;
@@ -498,19 +510,23 @@ p {
     }
 }
 
+footer{
+    background: #b0b0b0;
+}
 footer .container .row{
     align-items: center;
     display: flex;
     justify-content: space-around;
     align-items: center;
     p{
+        font-size: 15px;    
         font-family: serif;
         margin: 0;
     }
     div{
         font-family: pt sans;
-        font-size: 13pxx;
+        font-size: 12pxx;
         margin: 0;
-        color: rgb(160, 140, 9);
+        color: rgb(9, 105, 160);
     }
 }
