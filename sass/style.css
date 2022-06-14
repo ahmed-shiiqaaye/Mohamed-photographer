@@ -82,7 +82,7 @@ p {
 
 .home-section {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 30, 0.4)), to(rgba(0, 0, 30, 0.4))), url(/home.jpg) no-repeat center center/cover;
   background: linear-gradient(rgba(0, 0, 30, 0.4), rgba(0, 0, 30, 0.4)), url(/home.jpg) no-repeat center center/cover;
