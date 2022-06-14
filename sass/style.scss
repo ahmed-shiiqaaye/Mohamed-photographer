@@ -489,3 +489,20 @@ p {
         }
     }
 }
+
+footer .container .row{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    p{
+        font-family: serif;
+        margin: 0;
+    }
+    div{
+        font-family: pt sans;
+        font-size: 13pxx;
+        margin: 0;
+        color: rgb(160, 140, 9);
+    }
+}
