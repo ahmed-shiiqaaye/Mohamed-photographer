@@ -109,6 +109,13 @@ p {
   }
 }
 
+@media (max-width: 556px) {
+  .home-section .container h2 {
+    font-size: 35px;
+    font-weight: bold;
+  }
+}
+
 .home-section .container p {
   color: white;
   text-transform: uppercase;
@@ -116,6 +123,13 @@ p {
   letter-spacing: 1.2px;
   word-spacing: 2.4px;
   font-family: montserrat;
+}
+
+@media (max-width: 556px) {
+  .home-section .container p {
+    font-size: 16px;
+    font-weight: normal;
+  }
 }
 
 .home-section .container .home-btn {

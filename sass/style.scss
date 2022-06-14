@@ -87,8 +87,16 @@ p {
       @media (max-width: 991px) {
         font-size: 40px;
       }
+      @media (max-width: 556px) {
+        font-size: 35px;
+        font-weight: bold;
+      }
     }
     p {
+        @media (max-width: 556px) {
+            font-size: 16px;
+            font-weight: normal;
+          }
       color: white;
       text-transform: uppercase;
       font-weight: 400;
